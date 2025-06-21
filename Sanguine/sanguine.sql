@@ -1,3 +1,4 @@
+-- Original promotion system (works for all players)
 INSERT INTO	Types
 			(Type,								Kind)
 VALUES		('PROMOTION_VAMPIRE_ENTHRALL',		'KIND_PROMOTION'),
@@ -18,7 +19,7 @@ VALUES		('PROMOTION_VAMPIRE_ENTHRALL',		'Enthrall',			'Defeated enemy units are 
 			('PROMOTION_VAMPIRE_MIST_CLOUD',	'Mist Cloud',		'LOC_PROMOTION_MONK_TWILIGHT_VEIL_DESCRIPTION',							'3',	'3',	'PROMOTION_CLASS_VAMPIRE'),
 			('PROMOTION_VAMPIRE_IMMORTAL',		'Immortal Blood',	'LOC_ABILITY_MAMLUK_DESCRIPTION',										'4',	'2',	'PROMOTION_CLASS_VAMPIRE');
 			
-			INSERT INTO	UnitPromotionPrereqs
+INSERT INTO	UnitPromotionPrereqs
 			(UnitPromotion,						PrereqUnitPromotion)
 VALUES		('PROMOTION_VAMPIRE_DARK_GIFT',		'PROMOTION_VAMPIRE_ENTHRALL'),
 			('PROMOTION_VAMPIRE_DARK_GIFT',		'PROMOTION_VAMPIRE_BAT_SWARM'),

@@ -1,15 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <GameInfo>
+	<!-- Keep the 100% discovery chance for barbarian camps -->
 	<SecretSocieties>
         <Update>
             <Where SecretSocietyType="SECRETSOCIETY_SANGUINE_PACT" />
             <Set DiscoverAtBarbarianCampBaseChance="100" />
         </Update>
 	</SecretSocieties>
+	
+	<!-- Keep universal XP gain for all vampires -->
 	<Units>
         <Update>
             <Where UnitType="UNIT_VAMPIRE" />
-            <Set BaseMoves="8" BaseSightRange="5" CanEarnExperience="true" Description="Combat unit unique to the Sanguine Pact. Has base [ICON_Strength] Combat Strength equal to the strongest unit your cities have produced. Gains [ICON_Strength] Combat Strength when units die in adjacent tiles (bonus from barbarians is capped at +10). When killed, retreats to the [ICON_Capital] Capital or nearest Vampire Castle. Increased heals from pillaging enemy tiles, but has reduced passive healing." />
+            <Set CanEarnExperience="true" />
         </Update>
 	</Units>
+	
+	<!-- Requirements to check if player is human -->
+	<Requirements>
+		<Row RequirementId="REQUIREMENT_PLAYER_IS_HUMAN_VAMPIRE" RequirementType="REQUIREMENT_PLAYER_IS_HUMAN"/>
+	</Requirements>
+	
+	<RequirementSets>
+		<Row RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE" RequirementSetType="REQUIREMENTSET_TEST_ALL"/>
+	</RequirementSets>
+	
+	<RequirementSetRequirements>
+		<Row RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE" RequirementId="REQUIREMENT_PLAYER_IS_HUMAN_VAMPIRE"/>
+	</RequirementSetRequirements>
+	
+	<!-- Modifiers for human players only -->
+	<Modifiers>
+		<Row ModifierId="VAMPIRE_HUMAN_MOVEMENT_BONUS" ModifierType="MODIFIER_PLAYER_UNITS_ADJUST_MOVEMENT"/>
+		<Row ModifierId="VAMPIRE_HUMAN_SIGHT_BONUS" ModifierType="MODIFIER_PLAYER_UNITS_ADJUST_SIGHT_RANGE"/>
+	</Modifiers>
+	
+	<ModifierArguments>
+		<Row ModifierId="VAMPIRE_HUMAN_MOVEMENT_BONUS" Name="UnitType" Value="UNIT_VAMPIRE"/>
+		<Row ModifierId="VAMPIRE_HUMAN_MOVEMENT_BONUS" Name="Amount" Value="6"/>
+		<Row ModifierId="VAMPIRE_HUMAN_SIGHT_BONUS" Name="UnitType" Value="UNIT_VAMPIRE"/>
+		<Row ModifierId="VAMPIRE_HUMAN_SIGHT_BONUS" Name="Amount" Value="4"/>
+	</ModifierArguments>
+	
+	<!-- Attach modifiers to human players only -->
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="VAMPIRE_HUMAN_MOVEMENT_BONUS"/>
+		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="VAMPIRE_HUMAN_SIGHT_BONUS"/>
+	</TraitModifiers>
+	
+	<ModifierRequirements>
+		<Row ModifierId="VAMPIRE_HUMAN_MOVEMENT_BONUS" RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE"/>
+		<Row ModifierId="VAMPIRE_HUMAN_SIGHT_BONUS" RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE"/>
+	</ModifierRequirements>
 </GameInfo>

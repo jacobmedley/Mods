@@ -32,7 +32,11 @@
 	</RequirementSetRequirements>
 	
 	<RequirementArguments>
-		<Row RequirementId="REQUIREMENT_UNIT_IS_VAMPIRE" Name="UnitType" Value="UNIT_VAMPIRE"/>
+		<Row>
+			<RequirementId>REQUIREMENT_UNIT_IS_VAMPIRE</RequirementId>
+			<Name>UnitType</Name>
+			<Value>UNIT_VAMPIRE</Value>
+		</Row>
 	</RequirementArguments>
 	
 	<!-- Modifiers to grant promotions to human vampire units -->
@@ -44,14 +48,46 @@
 	</Modifiers>
 	
 	<ModifierArguments>
-		<Row ModifierId="VAMPIRE_HUMAN_IMMORTAL_PROMOTION" Name="UnitType" Value="UNIT_VAMPIRE"/>
-		<Row ModifierId="VAMPIRE_HUMAN_IMMORTAL_PROMOTION" Name="PromotionType" Value="PROMOTION_VAMPIRE_IMMORTAL"/>
-		<Row ModifierId="VAMPIRE_HUMAN_ENHANCED_PROMOTION" Name="UnitType" Value="UNIT_VAMPIRE"/>
-		<Row ModifierId="VAMPIRE_HUMAN_ENHANCED_PROMOTION" Name="PromotionType" Value="PROMOTION_VAMPIRE_HUMAN_ENHANCED"/>
-		<Row ModifierId="VAMPIRE_HUMAN_COMBAT_PROMOTION" Name="UnitType" Value="UNIT_VAMPIRE"/>
-		<Row ModifierId="VAMPIRE_HUMAN_COMBAT_PROMOTION" Name="PromotionType" Value="PROMOTION_VAMPIRE_HUMAN_COMBAT"/>
-		<Row ModifierId="VAMPIRE_HUMAN_MOVEMENT_PROMOTION" Name="UnitType" Value="UNIT_VAMPIRE"/>
-		<Row ModifierId="VAMPIRE_HUMAN_MOVEMENT_PROMOTION" Name="PromotionType" Value="PROMOTION_VAMPIRE_HUMAN_MOVEMENT"/>
+		<Row>
+			<ModifierId>VAMPIRE_HUMAN_IMMORTAL_PROMOTION</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_VAMPIRE</Value>
+		</Row>
+		<Row>
+			<ModifierId>VAMPIRE_HUMAN_IMMORTAL_PROMOTION</ModifierId>
+			<Name>PromotionType</Name>
+			<Value>PROMOTION_VAMPIRE_IMMORTAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>VAMPIRE_HUMAN_ENHANCED_PROMOTION</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_VAMPIRE</Value>
+		</Row>
+		<Row>
+			<ModifierId>VAMPIRE_HUMAN_ENHANCED_PROMOTION</ModifierId>
+			<Name>PromotionType</Name>
+			<Value>PROMOTION_VAMPIRE_HUMAN_ENHANCED</Value>
+		</Row>
+		<Row>
+			<ModifierId>VAMPIRE_HUMAN_COMBAT_PROMOTION</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_VAMPIRE</Value>
+		</Row>
+		<Row>
+			<ModifierId>VAMPIRE_HUMAN_COMBAT_PROMOTION</ModifierId>
+			<Name>PromotionType</Name>
+			<Value>PROMOTION_VAMPIRE_HUMAN_COMBAT</Value>
+		</Row>
+		<Row>
+			<ModifierId>VAMPIRE_HUMAN_MOVEMENT_PROMOTION</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_VAMPIRE</Value>
+		</Row>
+		<Row>
+			<ModifierId>VAMPIRE_HUMAN_MOVEMENT_PROMOTION</ModifierId>
+			<Name>PromotionType</Name>
+			<Value>PROMOTION_VAMPIRE_HUMAN_MOVEMENT</Value>
+		</Row>
 	</ModifierArguments>
 	
 	<!-- Attach modifiers to human players only -->

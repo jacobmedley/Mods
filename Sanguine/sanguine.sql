@@ -27,10 +27,10 @@ VALUES		('PROMOTION_VAMPIRE_ENTHRALL',		'Enthrall',			'Defeated enemy units are 
 			('PROMOTION_VAMPIRE_BLOODLUST',		'Bloodlust',		'LOC_PROMOTION_ELITE_GUARD_DESCRIPTION',								'3',	'1',	'PROMOTION_CLASS_VAMPIRE'),
 			('PROMOTION_VAMPIRE_MIST_CLOUD',	'Mist Cloud',		'LOC_PROMOTION_MONK_TWILIGHT_VEIL_DESCRIPTION',							'3',	'3',	'PROMOTION_CLASS_VAMPIRE'),
 			('PROMOTION_VAMPIRE_IMMORTAL',		'Immortal Blood',	'LOC_ABILITY_MAMLUK_DESCRIPTION',										'4',	'1',	'PROMOTION_CLASS_VAMPIRE'),
-			('PROMOTION_VAMPIRE_DEATH_TOUCH',	'Death Touch',		'+25 [ICON_Strength] Combat Strength. The ultimate vampire power.',	'4',	'2',	'PROMOTION_CLASS_VAMPIRE'),
+			('PROMOTION_VAMPIRE_DEATH_TOUCH',	'Death Touch',		'+100 [ICON_Strength] Combat Strength. The ultimate vampire power.',	'4',	'2',	'PROMOTION_CLASS_VAMPIRE'),
 			-- Hidden human-only promotions
 			('PROMOTION_VAMPIRE_HUMAN_ENHANCED','Vampire Lord',		'Enhanced vampire abilities for human masters.',						'-1',	'-1',	'PROMOTION_CLASS_VAMPIRE'),
-			('PROMOTION_VAMPIRE_HUMAN_COMBAT',	'Ancient Power',	'+100 [ICON_Strength] Combat Strength from ancient vampire blood.',		'-1',	'-1',	'PROMOTION_CLASS_VAMPIRE'),
+			('PROMOTION_VAMPIRE_HUMAN_COMBAT',	'Ancient Power',	'+25 [ICON_Strength] Combat Strength from ancient vampire blood.',		'-1',	'-1',	'PROMOTION_CLASS_VAMPIRE'),
 			('PROMOTION_VAMPIRE_HUMAN_MOVEMENT','Supernatural Speed','+6 [ICON_Movement] Movement and +4 Sight Range.',						'-1',	'-1',	'PROMOTION_CLASS_VAMPIRE');
 
 -- Custom modifiers using correct Civ 6 modifier types
@@ -43,8 +43,8 @@ VALUES		('VAMPIRE_DEATH_TOUCH_COMBAT_BONUS',	'MODIFIER_UNIT_ADJUST_COMBAT_STRENG
 
 INSERT INTO	ModifierArguments
 			(ModifierId,							Name,		Value)
-VALUES		('VAMPIRE_DEATH_TOUCH_COMBAT_BONUS',	'Amount',	'25'),
-			('VAMPIRE_HUMAN_COMBAT_MODIFIER',		'Amount',	'100'),
+VALUES		('VAMPIRE_DEATH_TOUCH_COMBAT_BONUS',	'Amount',	'100'),
+			('VAMPIRE_HUMAN_COMBAT_MODIFIER',		'Amount',	'25'),
 			('VAMPIRE_HUMAN_MOVEMENT_MODIFIER',		'Amount',	'6'),
 			('VAMPIRE_HUMAN_SIGHT_MODIFIER',		'Amount',	'4');
 			

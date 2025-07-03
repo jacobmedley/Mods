@@ -16,7 +16,7 @@
         </Update>
 	</Units>
 	
-	<!-- Requirements to check if player is human -->
+	<!-- Simple requirements - just check if player is human -->
 	<Requirements>
 		<Row RequirementId="REQUIREMENT_PLAYER_IS_HUMAN_VAMPIRE" RequirementType="REQUIREMENT_PLAYER_IS_HUMAN"/>
 		<Row RequirementId="REQUIREMENT_UNIT_IS_VAMPIRE" RequirementType="REQUIREMENT_UNIT_TYPE_MATCHES"/>
@@ -45,7 +45,6 @@
 		<Row ModifierId="VAMPIRE_HUMAN_ENHANCED_PROMOTION" ModifierType="MODIFIER_PLAYER_UNITS_GRANT_PROMOTION"/>
 		<Row ModifierId="VAMPIRE_HUMAN_COMBAT_PROMOTION" ModifierType="MODIFIER_PLAYER_UNITS_GRANT_PROMOTION"/>
 		<Row ModifierId="VAMPIRE_HUMAN_MOVEMENT_PROMOTION" ModifierType="MODIFIER_PLAYER_UNITS_GRANT_PROMOTION"/>
-		<Row ModifierId="VAMPIRE_HUMAN_FEAR_PROMOTION" ModifierType="MODIFIER_PLAYER_UNITS_GRANT_PROMOTION"/>
 		<Row ModifierId="VAMPIRE_HUMAN_SYMBIOSIS_PROMOTION" ModifierType="MODIFIER_PLAYER_UNITS_GRANT_PROMOTION"/>
 		<Row ModifierId="VAMPIRE_HUMAN_WINGS_PROMOTION" ModifierType="MODIFIER_PLAYER_UNITS_GRANT_PROMOTION"/>
 	</Modifiers>
@@ -59,7 +58,7 @@
 		<Row>
 			<ModifierId>VAMPIRE_HUMAN_IMMORTAL_PROMOTION</ModifierId>
 			<Name>PromotionType</Name>
-			<Value>PROMOTION_VAMPIRE_IMMORTAL</Value>
+			<Value>PROMOTION_VAMPIRE_HUMAN_IMMORTAL</Value>
 		</Row>
 		<Row>
 			<ModifierId>VAMPIRE_HUMAN_ENHANCED_PROMOTION</ModifierId>
@@ -91,6 +90,26 @@
 			<Name>PromotionType</Name>
 			<Value>PROMOTION_VAMPIRE_HUMAN_MOVEMENT</Value>
 		</Row>
+		<Row>
+			<ModifierId>VAMPIRE_HUMAN_SYMBIOSIS_PROMOTION</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_VAMPIRE</Value>
+		</Row>
+		<Row>
+			<ModifierId>VAMPIRE_HUMAN_SYMBIOSIS_PROMOTION</ModifierId>
+			<Name>PromotionType</Name>
+			<Value>PROMOTION_VAMPIRE_SYMBIOSIS</Value>
+		</Row>
+		<Row>
+			<ModifierId>VAMPIRE_HUMAN_WINGS_PROMOTION</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_VAMPIRE</Value>
+		</Row>
+		<Row>
+			<ModifierId>VAMPIRE_HUMAN_WINGS_PROMOTION</ModifierId>
+			<Name>PromotionType</Name>
+			<Value>PROMOTION_VAMPIRE_WINGS_NIGHT</Value>
+		</Row>
 	</ModifierArguments>
 	
 	<!-- Attach modifiers to human players only -->
@@ -99,7 +118,6 @@
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="VAMPIRE_HUMAN_ENHANCED_PROMOTION"/>
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="VAMPIRE_HUMAN_COMBAT_PROMOTION"/>
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="VAMPIRE_HUMAN_MOVEMENT_PROMOTION"/>
-		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="VAMPIRE_HUMAN_FEAR_PROMOTION"/>
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="VAMPIRE_HUMAN_SYMBIOSIS_PROMOTION"/>
 		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="VAMPIRE_HUMAN_WINGS_PROMOTION"/>
 	</TraitModifiers>
@@ -109,7 +127,6 @@
 		<Row ModifierId="VAMPIRE_HUMAN_ENHANCED_PROMOTION" RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE"/>
 		<Row ModifierId="VAMPIRE_HUMAN_COMBAT_PROMOTION" RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE"/>
 		<Row ModifierId="VAMPIRE_HUMAN_MOVEMENT_PROMOTION" RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE"/>
-		<Row ModifierId="VAMPIRE_HUMAN_FEAR_PROMOTION" RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE"/>
 		<Row ModifierId="VAMPIRE_HUMAN_SYMBIOSIS_PROMOTION" RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE"/>
 		<Row ModifierId="VAMPIRE_HUMAN_WINGS_PROMOTION" RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE"/>
 	</ModifierRequirements>

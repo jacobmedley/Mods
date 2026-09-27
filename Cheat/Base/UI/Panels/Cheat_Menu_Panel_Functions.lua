@@ -19,7 +19,7 @@ local pVis 							= PlayersVisibility[playerID];
 local pNewGP 						= 1;
 local pNewEnvoy 					= 999999;
 local pNewReligion 					= 999999;
-local pNewFavor						= 100;
+local pNewFavor						= 999999;
 local pNewPopulation				= 1;
 local m_hideCheatPanel				= false;
 local m_IsLoading:boolean			= false;
@@ -57,7 +57,7 @@ function ChangeEraScoreBack()
 	RefreshActionPanel();
 end
 function ChangeGold()
-	local pNewGold = 999999
+	local pNewGold = 1000
 	if pPlayer:IsHuman() then
 		ExposedMembers.MOD_CheatMenu.ChangeGold(playerID, pNewGold); 
     end

@@ -16,30 +16,82 @@
         </Update>
 	</Units>
 	
-	<!-- Simple requirements - just check if player is human -->
-	<Requirements>
-		<Row RequirementId="REQUIREMENT_PLAYER_IS_HUMAN_VAMPIRE" RequirementType="REQUIREMENT_PLAYER_IS_HUMAN"/>
-		<Row RequirementId="REQUIREMENT_UNIT_IS_VAMPIRE" RequirementType="REQUIREMENT_UNIT_TYPE_MATCHES"/>
-	</Requirements>
+	<!-- Create custom trait for vampire bonuses -->
+	<Types>
+		<Row Type="TRAIT_VAMPIRE_MASTER" Kind="KIND_TRAIT"/>
+	</Types>
 	
-	<RequirementSets>
-		<Row RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE" RequirementSetType="REQUIREMENTSET_TEST_ALL"/>
-	</RequirementSets>
+	<Traits>
+		<Row TraitType="TRAIT_VAMPIRE_MASTER" Name="Vampire Master" Description="Enhanced vampire abilities for chosen civilizations."/>
+	</Traits>
 	
-	<RequirementSetRequirements>
-		<Row RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE" RequirementId="REQUIREMENT_PLAYER_IS_HUMAN_VAMPIRE"/>
-		<Row RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE" RequirementId="REQUIREMENT_UNIT_IS_VAMPIRE"/>
-	</RequirementSetRequirements>
+	<!-- Assign vampire master trait to specific civilizations (add/remove as needed) -->
+<!-- All Base Game + DLC Civilizations -->
+<CivilizationTraits>
+	<!-- Base Game -->
 	
-	<RequirementArguments>
-		<Row>
-			<RequirementId>REQUIREMENT_UNIT_IS_VAMPIRE</RequirementId>
-			<Name>UnitType</Name>
-			<Value>UNIT_VAMPIRE</Value>
-		</Row>
-	</RequirementArguments>
+<Row CivilizationType="CIVILIZATION_MONGOLIA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<!-- <Row CivilizationType="CIVILIZATION_AMERICA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_ARABIA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_BRAZIL" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_CHINA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_EGYPT" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_ENGLAND" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_FRANCE" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_GERMANY" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_GREECE" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_INDIA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_JAPAN" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_KONGO" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_NORWAY" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_ROME" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_RUSSIA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_SCYTHIA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_SPAIN" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_SUMERIA" TraitType="TRAIT_VAMPIRE_MASTER"/> -->
 	
-	<!-- Modifiers to grant promotions to human vampire units -->
+	<!-- Rise and Fall DLC -->
+
+	<!--
+	<Row CivilizationType="CIVILIZATION_MONGOLIA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_CREE" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_GEORGIA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_KOREA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_MACEDONIA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_NETHERLANDS" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_SCOTLAND" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_ZULU" TraitType="TRAIT_VAMPIRE_MASTER"/> -->
+	
+	<!-- Gathering Storm DLC -->
+
+	<!-- <Row CivilizationType="CIVILIZATION_CANADA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_HUNGARY" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_INCA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_MALI" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_MAORI" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_OTTOMAN" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_PHOENICIA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_SWEDEN" TraitType="TRAIT_VAMPIRE_MASTER"/> -->
+	
+	<!-- New Frontier Pass -->
+
+	<!-- <Row CivilizationType="CIVILIZATION_AUSTRALIA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_AZTEC" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_BABYLON" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_BYZANTIUM" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_ETHIOPIA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_GAUL" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_GRAN_COLOMBIA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_KHMER" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_NUBIA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_PERSIA" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_POLAND" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_PORTUGAL" TraitType="TRAIT_VAMPIRE_MASTER"/>
+	<Row CivilizationType="CIVILIZATION_VIETNAM" TraitType="TRAIT_VAMPIRE_MASTER"/> -->
+
+</CivilizationTraits>
+	
+	<!-- Modifiers that grant promotions to vampire units -->
 	<Modifiers>
 		<Row ModifierId="VAMPIRE_HUMAN_IMMORTAL_PROMOTION" ModifierType="MODIFIER_PLAYER_UNITS_GRANT_PROMOTION"/>
 		<Row ModifierId="VAMPIRE_HUMAN_ENHANCED_PROMOTION" ModifierType="MODIFIER_PLAYER_UNITS_GRANT_PROMOTION"/>
@@ -112,22 +164,13 @@
 		</Row>
 	</ModifierArguments>
 	
-	<!-- Attach modifiers to human players only -->
+	<!-- Apply vampire bonuses only to civilizations with the vampire master trait -->
 	<TraitModifiers>
-		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="VAMPIRE_HUMAN_IMMORTAL_PROMOTION"/>
-		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="VAMPIRE_HUMAN_ENHANCED_PROMOTION"/>
-		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="VAMPIRE_HUMAN_COMBAT_PROMOTION"/>
-		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="VAMPIRE_HUMAN_MOVEMENT_PROMOTION"/>
-		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="VAMPIRE_HUMAN_SYMBIOSIS_PROMOTION"/>
-		<Row TraitType="TRAIT_LEADER_MAJOR_CIV" ModifierId="VAMPIRE_HUMAN_WINGS_PROMOTION"/>
+		<Row TraitType="TRAIT_VAMPIRE_MASTER" ModifierId="VAMPIRE_HUMAN_IMMORTAL_PROMOTION"/>
+		<Row TraitType="TRAIT_VAMPIRE_MASTER" ModifierId="VAMPIRE_HUMAN_ENHANCED_PROMOTION"/>
+		<Row TraitType="TRAIT_VAMPIRE_MASTER" ModifierId="VAMPIRE_HUMAN_COMBAT_PROMOTION"/>
+		<Row TraitType="TRAIT_VAMPIRE_MASTER" ModifierId="VAMPIRE_HUMAN_MOVEMENT_PROMOTION"/>
+		<Row TraitType="TRAIT_VAMPIRE_MASTER" ModifierId="VAMPIRE_HUMAN_SYMBIOSIS_PROMOTION"/>
+		<Row TraitType="TRAIT_VAMPIRE_MASTER" ModifierId="VAMPIRE_HUMAN_WINGS_PROMOTION"/>
 	</TraitModifiers>
-	
-	<ModifierRequirements>
-		<Row ModifierId="VAMPIRE_HUMAN_IMMORTAL_PROMOTION" RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE"/>
-		<Row ModifierId="VAMPIRE_HUMAN_ENHANCED_PROMOTION" RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE"/>
-		<Row ModifierId="VAMPIRE_HUMAN_COMBAT_PROMOTION" RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE"/>
-		<Row ModifierId="VAMPIRE_HUMAN_MOVEMENT_PROMOTION" RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE"/>
-		<Row ModifierId="VAMPIRE_HUMAN_SYMBIOSIS_PROMOTION" RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE"/>
-		<Row ModifierId="VAMPIRE_HUMAN_WINGS_PROMOTION" RequirementSetId="REQUIREMENTSET_PLAYER_IS_HUMAN_VAMPIRE"/>
-	</ModifierRequirements>
 </GameInfo>
